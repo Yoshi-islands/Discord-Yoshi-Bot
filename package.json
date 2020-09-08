@@ -1,0 +1,17 @@
+{
+  "name": "yoshi",
+  "version": "1.0.0",
+  "description": "this is a discord bot that helps users nagivate various genres of anime on discord itself",
+  "main": "Animez.js",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "discord.js": "^12.3.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node --experimental-modules Animez.mjs"
+  },
+  "author": "Maaz Syed",
+  "license": "ISC"
+}
