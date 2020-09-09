@@ -12,8 +12,8 @@ import {
 import Discord from "discord.js";
 import fileURLToPath from "url";
 import genreSearch from "./searchGenre.mjs";
-import fetch from "node-fetch";
 import animeSearch from "./searchAnime.mjs";
+import identity from "./identification.mjs";
 
 //Discord api
 const client = new Discord.Client();
@@ -72,7 +72,7 @@ function handleCommand(receivedMessage) {
   }
   //view command controller
   else if (mainCommand === "view") {
-    viewCommand(receivedMessage, primaryArgument, Limiter);
+    viewCommand(receivedMessage, primaryArgument);
   } else {
     embedError(receivedMessage);
   }
@@ -93,14 +93,14 @@ function embedError(receivedMessage) {
 }
 
 //Function will compute the arguments of the view command
-function viewCommand(receivedMessage, primaryArgument, Limiter) {
+function viewCommand(receivedMessage, primaryArgument) {
   if (primaryArgument[0] === "genres" && primaryArgument.length === 1) {
     viewGenres(receivedMessage);
   } else if (
     primaryArgument[0] === "genre" &&
     popularGenre.includes(primaryArgument[1]) //if it exists within the genre array ( case sensi-tive )
   ) {
-    viewSingleGenre(receivedMessage, primaryArgument, Limiter);
+    viewSingleGenre(receivedMessage, primaryArgument);
   } else if (primaryArgument[0] === "anime") {
     viewAnime(receivedMessage, primaryArgument);
   } else {
@@ -109,7 +109,7 @@ function viewCommand(receivedMessage, primaryArgument, Limiter) {
 }
 
 //Function will compute first api call for a specific genre of anime ( list )
-async function viewSingleGenre(receivedMessage, primaryArgument, Limiter) {
+async function viewSingleGenre(receivedMessage, primaryArgument) {
   //Get the anime genre id
   const GenreIndex = popularGenre.indexOf(primaryArgument[1]);
   const GenreID = GenreIDS[GenreIndex];
@@ -228,4 +228,4 @@ function helpCommand(receivedMessage) {
   receivedMessage.channel.send(helpEmbed);
 }
 
-client.login("NzUxNjYwNTY1MTM4NzY3ODgz.X1MUcw.9DozILCQTerV94hoRRRsVIxw9Vc");
+client.login(identity.token);
