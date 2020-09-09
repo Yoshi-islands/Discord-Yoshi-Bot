@@ -1,4 +1,4 @@
 #Files to be ignored
 node_modules/
-*.identifier
+Demo/*.identifier
 identification.mjs
