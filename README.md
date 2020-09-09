@@ -26,7 +26,7 @@ which will give a list of commands that the user can use with a brief descriptio
 The \$view genres command is used for looking at the most popular anime genres
 ( from myanimelist, sorted with ratings and viewership )
 
-![view genres Demo](Demo/viewGenresCommand.jpg)
+![view genres Demo](Demo/viewGenrescommand)
 
 ## Viewing specific anime at that genre
 
