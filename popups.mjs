@@ -1,5 +1,3 @@
-import { config } from "process";
-
 //Configuration object for non-object relying purposes
 const configMessages = {
   color: "4335dd",

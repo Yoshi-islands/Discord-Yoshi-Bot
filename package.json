@@ -6,8 +6,7 @@
   "type": "module",
   "dependencies": {
     "axios": "^0.20.0",
-    "discord.js": "^12.3.1",
-    "heroku": "^7.42.13"
+    "discord.js": "^12.3.1"
   },
   "devDependencies": {},
   "scripts": {
