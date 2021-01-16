@@ -11,7 +11,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node  --experimental-modules Server.mjs"
+    "start": "node  --experimental-modules Animez.mjs"
   },
   "author": "Maaz Syed",
   "license": "ISC"
