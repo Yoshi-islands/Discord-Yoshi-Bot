@@ -10,10 +10,10 @@ import {
   oneAnime,
 } from "./popups.mjs";
 import Discord from "discord.js";
-import fileURLToPath from "url";
+//import fileURLToPath from "url";
 import genreSearch from "./searchGenre.mjs";
 import animeSearch from "./searchAnime.mjs";
-import identity from "./identification.mjs";
+//import identity from "./identification.mjs";
 
 //Discord api
 const client = new Discord.Client();
@@ -228,4 +228,4 @@ function helpCommand(receivedMessage) {
   receivedMessage.channel.send(helpEmbed);
 }
 
-client.login(identity.token);
+client.login(process.env.token);
