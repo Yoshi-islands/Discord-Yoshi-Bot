@@ -1,1 +1,1 @@
-worker: node --experimental-modules Animez.mjs
+worker: npm start
