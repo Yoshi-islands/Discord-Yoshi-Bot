@@ -10,7 +10,7 @@ const configMessages = {
 
 //Object for various messages relating to the help embed fields
 export const popMessages = {
-  helpError: "Please try !help for a list of commands ( case sensitive ) ",
+  helpError: "Please try $help for a list of commands ( case sensitive ) ",
   helpErrorimg: "https://image.flaticon.com/icons/png/128/753/753345.png",
   image:
     "https://vignette.wikia.nocookie.net/youkoso-jitsuryoku-shijou-shugi-no-kyoushitsu-e/images/b/bf/Episode_012-07.jpg/revision/latest/scale-to-width-down/340?cb=20170928143111",
