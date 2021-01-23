@@ -104,7 +104,7 @@ function viewCommand(receivedMessage, primaryArgument) {
     viewSingleGenre(receivedMessage, primaryArgument);
   } else if (primaryArgument[0] === "anime") {
     viewAnime(receivedMessage, primaryArgument);
-  } else if ( {
+  } else {
     embedError(receivedMessage);
   }
 }
