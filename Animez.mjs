@@ -22,13 +22,14 @@ const client = new Discord.Client();
 
 //Checking if the bot has received any messages, with the message event
 client.on("message", (receivedMessage) => {
+
   if (receivedMessage.author === client.user) {
     //preventing bot from responding to its own messages
 
     return;
   }
 
-  if (receivedMessage.content.startsWith("$")) {
+  if (receivedMessage.content.startsWith("$") && ( receivedMessage.content.length >= 5))  {
     handleCommand(receivedMessage); //sending the full command
   }
 });
@@ -37,7 +38,7 @@ client.on("message", (receivedMessage) => {
 
 function handleCommand(receivedMessage) {
   /*Ex : 
-         input : !view genres
+         input : $view genres
          normal command = view genres
          main command = view
          primary arg = genres
@@ -103,7 +104,7 @@ function viewCommand(receivedMessage, primaryArgument) {
     viewSingleGenre(receivedMessage, primaryArgument);
   } else if (primaryArgument[0] === "anime") {
     viewAnime(receivedMessage, primaryArgument);
-  } else {
+  } else if ( {
     embedError(receivedMessage);
   }
 }
